@@ -26,7 +26,7 @@
       <input type="image" src="/img/ajuda.png" class="ajuda">
     </form>
 
-    <a href="/views/inicio.ejs"><img src="/img/btn voltar.png" class="voltar"></a>
+    <a href="/html/inicio.ejs"><img src="/img/btn voltar.png" class="voltar"></a>
 
   </header>
 
@@ -36,7 +36,8 @@
       <div class="rectangle2"></div>
       <div class="rectangle3"></div>
       <div class="rectangle4"></div>
-    
+
+      <img src="/img/Components.png" class="agendamento">
     </section>
   </main>
 
@@ -45,18 +46,6 @@
     <img
       src="https://prodoctor.net/blog/wp-content/uploads/2020/03/como-melhorar-a-relacao-medico-paciente.png-min-1280x720.jpg">
   </div>
-
-  <div class="input-container">
-    <h2>Marcar consulta</h2>
-    <form id="agendamento-form">
-      <input type="text" id="texto1" name="texto1" placeholder="Médico(a)">
-      <input type="text" id="texto2" name="texto2" placeholder="Data">
-      <input type="text" id="texto3" name="texto3" placeholder="Senha">
-      <div class="button-container">
-        <button type="submit">Enviar</button>
-      </div>
-    </form>
-
 
     <div id="mensagem" style="display: none;"></div>
   </div>
@@ -165,16 +154,27 @@
     }
 
     .rectangle4 {
-      width: 75rem;
-      height: 25.6rem;
+      width: 65.5rem;
+      height: 30rem;
       background: #C6CAC9;
       z-index: 2;
-      left: 3%;
-      top: 23%;
+      left: 9%;
+      top: 19%;
       position: absolute;
       text-align: center;
-      opacity: 0.4;
+      opacity: 0.45;
       border-radius: 10px;
+    }
+
+    .agendamento {
+      position: absolute;
+      text-align: center;
+      width: 58rem;
+      height: 28rem;
+      left: 13.5%;
+      top: 21.5%;
+      opacity: 90%;
+      z-index: 4;
     }
 
     .input-container {
