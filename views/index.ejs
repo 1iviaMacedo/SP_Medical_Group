@@ -1,103 +1,170 @@
 <!DOCTYPE html>
-
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="/public/agendar.css">
-  <link rel="shortcut icon" type="image/jpg" href="/img/logo.png">
-  <title>SP Medical Group</title>
+    <link rel="shortcut icon" type="image/jpg" href="logo.png">
+    <title>SP Medical Group</title>
+
 </head>
 
 <body>
 
-  <header>
+    <header>
+        <div>
+            <div>
+                <img src="logo.png" type="img" class="logo" height="95" width="95">
+            </div>
 
-    <div>
-      <img src="/img/fundo2.png" type="img" class="fundo">
-    </div>
+            <img src="SP Medical Group (1).png" class="titulo">
+        </div>
+    </header>
 
-    <div>
-      <img src="/img/logo.png" type="img" class="logo" height="80" width="80">
-    </div>
+    <main>
 
-    <img src="/img/SP Medical Group.png" class="titulo">
+        <div class="rectangle" type="rectangle">
 
-    <form class="ajuda">
-      <input type="image" src="/img/ajuda.png" class="ajuda">
-    </form>
+            <img src="divisória.png" class="rectangle2">
 
-    <form class="voltar">
-      <input type="image" src="/img/btn voltar.png" class="voltar">
-    </form>
+            <h1 style="color: #3F4927;"> EU SOU...</h1>
 
-  </header>
+            <div>
+                <form>
+                    <input type="image" src="paciente.png" class="img1" onclick="paciente()">
+                    <form>
 
-  <main>
-    <section>
-      <div class="rectangle"></div>
-      <div class="rectangle2"></div>
-      <div class="rectangle3"></div>
-      <div class="rectangle4"></div>
-    </section>
-  </main>
+                        <a class="paciente" type="button" href="login1">PACIENTE</a>
+            </div>
 
+            <div>
+                <form>
+                    <input type="image" src="funcionário.png" class="img2" onclick="funcionario()">
+                    <form>
 
-  <div>
-    <img
-      src="https://prodoctor.net/blog/wp-content/uploads/2020/03/como-melhorar-a-relacao-medico-paciente.png-min-1280x720.jpg">
-  </div>
+                        <a class="funcionario" type="button" href="login2">FUNCIONÁRIO</a>
+            </div>
 
-  <div class="input-container">
-    <h2>Marcar consulta</h2>
-    <form id="agendamento-form">
-      <input type="text" id="texto1" name="texto1" placeholder="Médico(a)">
-      <input type="text" id="texto2" name="texto2" placeholder="Data">
-      <input type="text" id="texto3" name="texto3" placeholder="Senha">
-      <div class="button-container">
-        <button type="submit">Enviar</button>
-      </div>
-    </form>
+        </div>
 
-
-    <div id="mensagem" style="display: none;"></div>
-  </div>
-
-  <script>
-    document.getElementById('agendamento-form').addEventListener('submit', function (event) {
-      event.preventDefault(); // Evita o envio padrão do formulário
-
-      const medico = document.getElementById('texto1').value;
-      const data = document.getElementById('texto2').value;
-      const senha = document.getElementById('texto3').value;
-
-      if (medico !== '' && data !== '' && senha !== '') {
-        const dadosAgendamento = {
-          medico: medico,
-          data: data,
-          senha: senha
-        };
-
-        fetch('/agendamentos', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(dadosAgendamento)
-        })
-          .then(response => response.json())
-          .then(data => {
-            document.getElementById('mensagem').style.display = 'block';
-            document.getElementById('mensagem').textContent = data.message;
-          })
-          .catch(error => {
-            console.error('Erro ao enviar o pedido de agendamento:', error);
-          });
-      } else {
-        alert('Por favor, preencha todos os campos antes de enviar o pedido de agendamento.');
-      }
-    });
-  </script>
+    </main>
 
 </body>
+
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+        /* border:1px solid red; */
+    }
+
+    body {
+        background-color: #D9DDD7;
+    }
+
+    .logo {
+        position: absolute;
+        height: 13%;
+        width: 6%;
+        z-index: 2;
+        left: 12%;
+        top: 1%;
+    }
+
+    .titulo {
+        position: absolute;
+        left: 20%;
+        top: 4.2%;
+        width: 23%;
+        z-index: 0;
+    }
+
+    #user {
+        position: absolute;
+        border-radius: 120px;
+        z-index: 4;
+        left: 20%;
+        top: 30%;
+    }
+
+    #usuario {
+        position: absolute;
+        border-radius: 120px;
+        z-index: 4;
+        left: 60%;
+        top: 30%;
+    }
+
+    img[type="img"] {
+        position: absolute;
+        border-radius: 40px;
+    }
+
+    .rectangle {
+        width: 63.9rem;
+        height: 30rem;
+        background: #8D9277;
+        position: absolute;
+        top: 15%;
+        left: 10%;
+        z-index: 1;
+        border-radius: 30px;
+    }
+
+    .rectangle2 {
+        position: absolute;
+        top: 10%;
+        z-index: 1;
+    }
+
+    h1 {
+        position: absolute;
+        top: 15%;
+        left: 41%;
+        font-size: 250%;
+        color: #3F4927;
+        z-index: 1;
+    }
+
+    .funcionario {
+        position: absolute;
+        color: #3F4927;
+        left: 66.3%;
+        top: 78%;
+        font-size: larger;
+        z-index: 1;
+    }
+
+    .paciente {
+        position: absolute;
+        color: #3F4927;
+        left: 18.8%;
+        top: 78%;
+        font-size: larger;
+        z-index: 1;
+    }
+
+    .img1 {
+        position: absolute;
+        width: 20%;
+        left: 13.5%;
+        top: 28%;
+        z-index: 1;
+    }
+
+    .img2 {
+        position: absolute;
+        width: 20%;
+        left: 62.5%;
+        top: 28%;
+        z-index: 1;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+</style>
 
 </html>

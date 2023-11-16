@@ -16,7 +16,7 @@
     <header>
 
         <div>
-            <img src="/img/logo.png" type="img" class="logo" height="95" width="95">
+            <img src="logo.png" type="img" class="logo" height="95" width="95">
         </div>
 
         <h1 class="titulo"> SP Medical Group </h1>
@@ -34,50 +34,62 @@
         <img src="https://blog.imedicina.com.br/wp-content/uploads/2017/09/iStock-1136865476-1200x695.jpg">
     </div>
 
+    <!-- <form action="/login" method="post">
+        <div class="login-fields">
+            <div><label for="username" style="width: 30vw;">Usuário:</label></div>
+            <div><input type="text" id="username" name="username" required style="width: 30vw;"></div>
+        </div>
+        <div class="login-fields">
+            <div><label for="password">Senha:</label></div>
+            <div> <input type="password" id="password" name="password" required style="width: 30vw;"></div>
+        </div>
+        <div class="login-fields"><button type="submit">Login</button></div>
+    </form> -->
+
     <div id="usuarios">
+        <form action="/login1" method="post">
 
-        <div class="email" id="email">
-            <input type="email" placeholder="Email">
-        </div>
+            <div class="email" id="email">
+                <input type="email" placeholder="Email" name="username">
+            </div>
 
-        <div class="cpf" id="cpf">
-            <input type="number" placeholder="CPF">
-        </div>
+            <div class="cpf" id="cpf" name="cpf">
+                <input type="number" placeholder="CPF">
+            </div>
 
-        <div class="senha" id="senha">
-            <input type="password" id="password" placeholder="Senha">
-        </div>
+            <div class="senha" id="senha">
+                <input type="password" id="password" name="password" placeholder="Senha">
+            </div>
 
-        <div>
-            <select id="cargo" class="cargo" placeholder="Cargo">
-                <option value="medico">Médico</option>
-                <option value="adm">Administrador</option>
-            </select>
-        </div>
+            <div>
+                <select id="cargo" class="cargo" placeholder="Cargo">
+                    <option value="medico">Médico</option>
+                    <option value="adm">Administrador</option>
+                </select>
+            </div>
 
-        <div class="entrar">
-            <button type="button" name="Entrar" id="entrar" onclick="entrar()">Entrar</button>
-        </div>
+            <div class="entrar">
+                <button type="submit" name="Entrar" id="entrar">Entrar</button>
+            </div>
 
-        <div>
-            <a href="/html/cadastro.html" class="opções1">Não estou</a>
-            <a href="/html/cadastro.html" class="opções2">cadastrado</a>
-            <a href="#" class="opções3">Esqueci a senha</a>
-        </div>
+            <div>
+                <a href="cadastro" class="opções1">Não estou</a>
+                <a href="cadastro" class="opções2">cadastrado</a>
+                <a href="#" class="opções3">Esqueci a senha</a>
+            </div>
 
-        <a href="/html/userselect.html"><img src="/img/btn voltar.png" class="voltar"></a>
 
-        <script>
+            <a href="index"><img src="btn voltar.png" class="voltar"></a>
+            <script>
 
-            function entrar() {
-                window.location.href = "/html/inicio.html"
-            }
 
-        </script>
 
+            </script>
+        </form>
         </head>
-
+    </div>
 </body>
+
 <style>
     * {
         margin: 0%;

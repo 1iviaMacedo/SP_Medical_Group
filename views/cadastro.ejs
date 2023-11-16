@@ -3,16 +3,14 @@
 <html lang="ptbr">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="/css/cadastro.css">
-  <link rel="shortcut icon" type="image/jpg" href="/img/logo.png">
+  <link rel="shortcut icon" type="image/jpg" href="logo.png">
   <title>SP Medical Group</title>
-  <script src="/js/cadastro.js"></script>
 </head>
 
 <body>
   <header>
     <div>
-      <img src="/img/logo.png" type="img" class="logo" height="95" width="95">
+      <img src="logo.png" type="img" class="logo" height="95" width="95">
     </div>
     <h1 class="titulo">SP Medical Group</h1>
   </header>
@@ -45,7 +43,8 @@
     <input type="password" id="confirmPassword" placeholder="Confirmar Senha">
   </div>
 
-  <a href="/views/login1.ejs"><img src="/img/btn voltar.png" class="voltar"></a>
+
+  <a href="inicio"><img src="btn voltar.png" class="voltar"></a>
 
 
   <div class="cadastrar">
@@ -247,6 +246,37 @@
       overflow-x: hidden;
     }
   </style>
+
+  <script>
+function Cadastrar() {
+    var email = document.getElementById("email").value.toLowerCase();
+    var cpf = document.getElementById("cpf").value;
+    var senha = document.getElementById("password").value;
+    var confirmPassword = document.getElementById("confirmPassword").value;
+
+    if (senha !== confirmPassword) {
+        alert("A senha e a confirmação de senha não coincidem. Tente novamente.");
+        return;
+    }
+
+    var xhr = new XMLHttpRequest();
+    var url = "cadastro.php";
+    var params = "email=" + email + "&cpf=" + cpf + "&senha=" + senha;
+
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState == 4 && xhr.status == 200) {
+            alert(xhr.responseText);
+            window.location.href = 'login1';
+        }
+    }
+
+    xhr.send(params);
+}
+
+  </script>
 </body>
 
 </html>

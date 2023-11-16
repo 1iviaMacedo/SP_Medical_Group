@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" type="text/css" href="/css/login1.css">
+    <link rel="shortcut icon" type="image/jpg" href="/img/logo.png">
+    <title>SP Medical Group</title>
+
+<body>
+
+    <header>
+
+        <div>
+            <img src="logo.png" type="img" class="logo" height="95" width="95">
+        </div>
+
+        <h1 class="titulo"> SP Medical Group </h1>
+    </header>
+
+    <div class="rectangle"></div>
+    <div class="rectangle2"></div>
+
+    <div class="login">
+        <h3>Login</h3>
+
+    </div>
+
+    <div class="fundo">
+        <img src="https://blog.imedicina.com.br/wp-content/uploads/2017/09/iStock-1136865476-1200x695.jpg">
+    </div>
+
+    <!-- <form action="/login" method="post">
+        <div class="login-fields">
+            <div><label for="username" style="width: 30vw;">Usuário:</label></div>
+            <div><input type="text" id="username" name="username" required style="width: 30vw;"></div>
+        </div>
+        <div class="login-fields">
+            <div><label for="password">Senha:</label></div>
+            <div> <input type="password" id="password" name="password" required style="width: 30vw;"></div>
+        </div>
+        <div class="login-fields"><button type="submit">Login</button></div>
+    </form> -->
+
+    <div id="usuarios">
+        <form action="/login1" method="post">
+
+            <div class="email" id="email">
+                <input type="email" placeholder="Email" name="username">
+            </div>
+
+
+            <div class="enviar">
+                <button type="submit" name="enviar" id="enviar">Enviar </button>
+            </div>
+
+
+            <a href="index"><img src="btn voltar.png" class="voltar"></a>
+
+
+         <script>
+            function enviarMensagem() {
+                // Lógica para enviar a mensagem
+                var mensagem = document.getElementById("inputMensagem").value;
+                
+                // Exibir a mensagem na caixa de resposta
+                exibirResposta('Email de recuperação de senha enviado com sucesso');
+            }
+    
+            function exibirResposta(mensagem) {
+                var respostaBox = document.getElementById("respostaBox");
+                respostaBox.innerHTML = "<p>Resposta: " + mensagem + "</p>";
+            }
+        </script>
+
+        </form>
+        </head>
+    </div>
+</body>
+
+<style>
+    * {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .logo {
+        position: absolute;
+        z-index: 2;
+        left: 15%;
+        top: 4%;
+        border-radius: 50%;
+    }
+
+    .titulo {
+        color: #3F4927;
+        right: 20%;
+        position: absolute;
+        top: 20%;
+        left: 9%;
+        z-index: 2;
+    }
+
+    .rectangle {
+        width: 30rem;
+        height: 45.5rem;
+        background: #8D9277;
+        position: absolute;
+        top: -18%;
+        z-index: 1;
+    }
+
+    .rectangle2 {
+        width: 25rem;
+        height: 25.6rem;
+        background: #B8BF9A;
+        position: absolute;
+        top: 30%;
+        left: 3%;
+        z-index: 2;
+    }
+
+    .login {
+        position: absolute;
+        z-index: 3;
+        color: #ffffff;
+        left: 16%;
+        font-size: 140%;
+        top: 38%;
+    }
+
+    .fundo {
+        position: absolute;
+        z-index: 0;
+        left: 25%;
+        top: -13%;
+        width: 50rem;
+        z-index: 0;
+    }
+
+    .email {
+        position: absolute;
+        z-index: 3;
+        left: 7%;
+        top: 50%;
+        color: #8D9277;
+    }
+
+    input[type="email"] {
+        width: 300px;
+        height: 30px;
+        background-color: #D9DDD7;
+        border-color: #D9DDD7;
+    }
+
+    .cpf {
+        position: absolute;
+        z-index: 3;
+        left: 7%;
+        top: 60%;
+        color: #8D9277;
+    }
+
+    .senha {
+        position: absolute;
+        z-index: 3;
+        left: 7%;
+        top: 70%;
+        color: #8D9277;
+    }
+
+    input[type="number"] {
+        width: 300px;
+        height: 30px;
+        background-color: #D9DDD7;
+        border-color: #D9DDD7;
+    }
+
+    input[type="password"] {
+        width: 300px;
+        height: 30px;
+        background-color: #D9DDD7;
+        border-color: #D9DDD7;
+    }
+
+    button {
+        position: absolute;
+        z-index: 3;
+        left: 16%;
+        top: 83%;
+        color: #FFFFFF;
+        height: 30px;
+        width: 65px;
+        background-color: #B79D7C;
+        border-radius: 5px;
+        border-color: #B79D7C;
+    }
+
+
+    .opções1 {
+        position: absolute;
+        z-index: 3;
+        color: #3F4927;
+        left: 26.5%;
+        top: 77%;
+        font-size: 80%;
+
+    }
+
+    .opções2 {
+        position: absolute;
+        z-index: 3;
+        color: #3F4927;
+        left: 26.5%;
+        top: 80%;
+        font-size: 80%;
+
+    }
+
+    .opções3 {
+        position: absolute;
+        z-index: 3;
+        color: #3F4927;
+        left: 7%;
+        top: 78%;
+        font-size: 80%;
+    }
+
+    .opções3 {
+        position: absolute;
+        z-index: 3;
+        color: #3F4927;
+        left: 7%;
+        top: 77%;
+        font-size: 80%;
+    }
+
+    .voltar {
+        position: absolute;
+        width: 3.3%;
+        left: 0.5%;
+        top: 1%;
+        z-index: 3;
+    }
+
+    body {
+        overflow-y: hidden;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+</style>
+
+</html>
